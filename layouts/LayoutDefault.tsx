@@ -1,21 +1,24 @@
-import "./style.css";
+// import "./style.css";
 
 import "./tailwind.css";
 
 import logoUrl from "../assets/logo.svg";
-import { Link } from "../components/Link.js";
 
 export default function LayoutDefault({ children }: { children: React.ReactNode }) {
   return (
-    <div className={"flex max-w-5xl m-auto"}>
-      <Sidebar>
-        <Logo />
-        <Link href="/">Welcome</Link>
-        <Link href="/todo">Todo</Link>
-        <Link href="/star-wars">Data Fetching</Link>
-        {""}
-      </Sidebar>
-      <Content>{children}</Content>
+    // <div className={"flex max-w-5xl m-auto"}>
+    //   <Sidebar>
+    //     <Logo />
+    //     <Link href="/">Welcome</Link>
+    //     <Link href="/todo">Todo</Link>
+    //     <Link href="/star-wars">Data Fetching</Link>
+    //     {""}
+    //   </Sidebar>
+    //   <Content>{children}</Content>
+    // </div>
+    <div className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-blue-950 text-foreground">
+      <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))] opacity-10" />
+      {children}
     </div>
   );
 }
