@@ -1,4 +1,7 @@
 name = "civic-bridge"
 compatibility_date = "2024-09-29"
-pages_build_output_dir = "./dist/cloudflare"
 compatibility_flags = ["nodejs_compat"]
+workers_dev = true
+
+[assets]
+directory = "./dist/cloudflare"
